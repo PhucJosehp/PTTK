@@ -2,13 +2,13 @@ import React from "react";
 import "../scss/screen.scss";
 import Sidebar from "../components/Sidebar";
 
-const Dashboard = () => {
+const Rooms = () => {
   return (
     <div>
       <Sidebar />
-      Dashboard
+      Rooms
     </div>
   );
 };
 
-export default Dashboard;
+export default Rooms;
