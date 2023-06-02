@@ -1,6 +1,8 @@
 import React from "react";
 import "../scss/components.scss";
 import "../assets/image/logo.png";
+import { NavLink } from "react-router-dom";
+
 import logo from "../assets/image/logo.png";
 import dashboard from "../assets/icon/Dashboard.png";
 import checkin from "../assets/icon/Checkin.png";
@@ -18,30 +20,35 @@ const Sidebar = () => {
       </div>
 
       <div className="sidebar__tab">
-        <div className="sidebar__tab__detail">
+        <NavLink to="/" className="sidebar__tab__detail">
           <img src={dashboard} alt="dashboard icon" className="sidebar__icon" />
           Dashboard
-        </div>
-        <div className="sidebar__tab__detail">
+        </NavLink>
+
+        <NavLink to="/Checkin" className="sidebar__tab__detail">
           <img src={checkin} alt="checkin icon" className="sidebar__icon" />
           Check in
-        </div>
-        <div className="sidebar__tab__detail">
+        </NavLink>
+
+        <NavLink to="/Rooms" className="sidebar__tab__detail">
           <img src={rooms} alt="rooms icon" className="sidebar__icon" />
           Rooms
-        </div>
-        <div className="sidebar__tab__detail">
+        </NavLink>
+
+        <NavLink to="/Services" className="sidebar__tab__detail">
           <img src={services} alt="services icon" className="sidebar__icon" />
           Services
-        </div>
-        <div className="sidebar__tab__detail">
+        </NavLink>
+
+        <NavLink to="/Tours" className="sidebar__tab__detail">
           <img src={tours} alt="tours icon" className="sidebar__icon" />
           Tours
-        </div>
-        <div className="sidebar__tab__detail">
+        </NavLink>
+
+        <NavLink to="/Payment" className="sidebar__tab__detail">
           <img src={payment} alt="payment icon" className="sidebar__icon" />
           Payment
-        </div>
+        </NavLink>
       </div>
     </div>
   );
