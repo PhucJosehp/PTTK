@@ -1,5 +1,6 @@
 $colorSideBar: #ffffff;
-
+$textcolor: #000;
+$hovercolor: #d9fdff;
 //------Side bar-----//
 .sidebar {
   width: 40vh;
@@ -44,11 +45,11 @@ $colorSideBar: #ffffff;
       padding-left: 25px;
       cursor: pointer;
       text-decoration: none;
-      color: #000;
+      color: $textcolor;
 
       &:hover {
         border-radius: 97px;
-        background-color: #d9fdff;
+        background-color: $hovercolor;
         transition: all 0.3;
       }
     }
@@ -64,5 +65,26 @@ $colorSideBar: #ffffff;
   width: 275px;
   height: 50px;
   border-radius: 97px;
-  background-color: #d9fdff;
+  background-color: $hovercolor;
+}
+
+//-----Showinf-----//
+.showinf {
+  &__inf {
+    margin-left: 32px;
+    margin-top: 32px;
+    &__name {
+      color: $textcolor;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 2.3vh;
+    }
+  }
+
+  &__date {
+    font-weight: 275;
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
