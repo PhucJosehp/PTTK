@@ -1,12 +1,12 @@
 import React from "react";
-import "../scss/screen.scss";
 import Sidebar from "../components/Sidebar";
+import "../scss/screen.scss";
 
 const Dashboard = () => {
   return (
-    <div>
+    <div className="dashboard">
       <Sidebar />
-      Dashboard
+      <div className="dashboard__view">Hi</div>
     </div>
   );
 };

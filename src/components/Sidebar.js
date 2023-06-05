@@ -14,31 +14,37 @@ import payment from "../assets/icon/Payment.png";
 const Sidebar = ({ children }) => {
   const itemtab = [
     {
+      id: 1,
       path: "/",
       name: "Dashboard",
       img: dashboard,
     },
     {
+      id: 2,
       path: "/Checkin",
       name: "Check in",
       img: checkin,
     },
     {
+      id: 3,
       path: "/Rooms",
       name: "Rooms",
       img: rooms,
     },
     {
+      id: 4,
       path: "/Services",
       name: "Services",
       img: services,
     },
     {
+      id: 5,
       path: "/Tours",
       name: "Tours",
       img: tours,
     },
     {
+      id: 6,
       path: "/Payment",
       name: "Payment",
       img: payment,
@@ -55,9 +61,10 @@ const Sidebar = ({ children }) => {
       <div className="sidebar__tab">
         {itemtab.map((item, idex) => (
           <NavLink
+            key={item.id}
             to={item.path}
             className="sidebar__tab__detail"
-            activeclassName="active"
+            activeclassname="active"
           >
             <img
               src={item.img}
