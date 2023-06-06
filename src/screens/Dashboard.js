@@ -1,12 +1,15 @@
 import React from "react";
-import "../scss/screen.scss";
 import Sidebar from "../components/Sidebar";
+import "../scss/screen.scss";
+import Showinf from "../components/Showinf";
 
 const Dashboard = () => {
   return (
-    <div>
+    <div className="dashboard">
       <Sidebar />
-      Dashboard
+      <div className="dashboard__view">
+        <Showinf name="CUSTOMER INFORMATION" />
+      </div>
     </div>
   );
 };
