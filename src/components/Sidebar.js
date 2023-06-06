@@ -11,7 +11,46 @@ import services from "../assets/icon/Services.png";
 import tours from "../assets/icon/Tours.png";
 import payment from "../assets/icon/Payment.png";
 
-const Sidebar = () => {
+const Sidebar = ({ children }) => {
+  const itemtab = [
+    {
+      id: 1,
+      path: "/",
+      name: "Dashboard",
+      img: dashboard,
+    },
+    {
+      id: 2,
+      path: "/Checkin",
+      name: "Check in",
+      img: checkin,
+    },
+    {
+      id: 3,
+      path: "/Rooms",
+      name: "Rooms",
+      img: rooms,
+    },
+    {
+      id: 4,
+      path: "/Services",
+      name: "Services",
+      img: services,
+    },
+    {
+      id: 5,
+      path: "/Tours",
+      name: "Tours",
+      img: tours,
+    },
+    {
+      id: 6,
+      path: "/Payment",
+      name: "Payment",
+      img: payment,
+    },
+  ];
+
   return (
     <div className="sidebar">
       <div className="sidebar__logo">
@@ -20,35 +59,21 @@ const Sidebar = () => {
       </div>
 
       <div className="sidebar__tab">
-        <NavLink to="/" className="sidebar__tab__detail">
-          <img src={dashboard} alt="dashboard icon" className="sidebar__icon" />
-          Dashboard
-        </NavLink>
-
-        <NavLink to="/Checkin" className="sidebar__tab__detail">
-          <img src={checkin} alt="checkin icon" className="sidebar__icon" />
-          Check in
-        </NavLink>
-
-        <NavLink to="/Rooms" className="sidebar__tab__detail">
-          <img src={rooms} alt="rooms icon" className="sidebar__icon" />
-          Rooms
-        </NavLink>
-
-        <NavLink to="/Services" className="sidebar__tab__detail">
-          <img src={services} alt="services icon" className="sidebar__icon" />
-          Services
-        </NavLink>
-
-        <NavLink to="/Tours" className="sidebar__tab__detail">
-          <img src={tours} alt="tours icon" className="sidebar__icon" />
-          Tours
-        </NavLink>
-
-        <NavLink to="/Payment" className="sidebar__tab__detail">
-          <img src={payment} alt="payment icon" className="sidebar__icon" />
-          Payment
-        </NavLink>
+        {itemtab.map((item, idex) => (
+          <NavLink
+            key={item.id}
+            to={item.path}
+            className="sidebar__tab__detail"
+            activeclassname="active"
+          >
+            <img
+              src={item.img}
+              alt="dashboard icon"
+              className="sidebar__icon"
+            />
+            {item.name}
+          </NavLink>
+        ))}
       </div>
     </div>
   );

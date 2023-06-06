@@ -1,7 +1,9 @@
 $colorSideBar: #ffffff;
-
+$textcolor: #000;
+$hovercolor: #d9fdff;
+//------Side bar-----//
 .sidebar {
-  width: 400px;
+  width: 40vh;
   height: 100vh;
 
   background: $colorSideBar;
@@ -12,8 +14,10 @@ $colorSideBar: #ffffff;
     justify-content: center;
 
     &__logo {
-      width: 100px;
+      width: 10 0px;
       height: 100px;
+      border: 1px black solid;
+      border-radius: 50%;
     }
 
     &__name {
@@ -33,26 +37,76 @@ $colorSideBar: #ffffff;
     &__detail {
       display: flex;
       align-items: center;
-      width: 300px;
+      width: 275px;
       height: 50px;
-      margin-bottom: 54px;
+      margin-bottom: 40px;
       margin-left: 40px;
       font-size: 20px;
       padding-left: 25px;
       cursor: pointer;
       text-decoration: none;
-      color: #000;
+      color: $textcolor;
 
       &:hover {
         border-radius: 97px;
-        background-color: #d9fdff;
+        background-color: $hovercolor;
+        transition: all 0.3;
       }
     }
   }
 
   &__icon {
-    width: 35px;
-    height: 35px;
+    width: 32px;
+    height: 32px;
     margin-right: 10px;
+  }
+}
+.active {
+  width: 275px;
+  height: 50px;
+  border-radius: 97px;
+  background-color: $hovercolor;
+}
+
+//-----Showinf-----//
+.showinf {
+  width: 79.1vw;
+  height: 200px;
+  &__inf {
+    margin-left: 32px;
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    &__name {
+      color: $textcolor;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 2.3vh;
+    }
+
+    &__date {
+      font-weight: 275;
+      font-size: 20px;
+      line-height: 24px;
+    }
+    &__icon {
+      width: 50px;
+      height: 50px;
+      margin-right: 60px;
+      margin-top: 10px;
+    }
+  }
+
+  &__screen-name {
+    margin-top: 4.5vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 43px;
   }
 }
