@@ -70,9 +70,13 @@ $hovercolor: #d9fdff;
 
 //-----Showinf-----//
 .showinf {
+  width: 79.1vw;
+  height: 200px;
   &__inf {
     margin-left: 32px;
     margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
     &__name {
       color: $textcolor;
       font-weight: 600;
@@ -80,11 +84,29 @@ $hovercolor: #d9fdff;
       line-height: 24px;
       margin-bottom: 2.3vh;
     }
+
+    &__date {
+      font-weight: 275;
+      font-size: 20px;
+      line-height: 24px;
+    }
+    &__icon {
+      width: 50px;
+      height: 50px;
+      margin-right: 60px;
+      margin-top: 10px;
+    }
   }
 
-  &__date {
-    font-weight: 275;
-    font-size: 20px;
-    line-height: 24px;
+  &__screen-name {
+    margin-top: 4.5vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 43px;
   }
 }

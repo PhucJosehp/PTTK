@@ -8,7 +8,7 @@ const Dashboard = () => {
     <div className="dashboard">
       <Sidebar />
       <div className="dashboard__view">
-        <Showinf />
+        <Showinf name="CUSTOMER INFORMATION" />
       </div>
     </div>
   );
