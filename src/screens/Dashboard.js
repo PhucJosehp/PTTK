@@ -1,7 +1,8 @@
 import React from "react";
-import Sidebar from "../components/Sidebar";
 import "../scss/screen.scss";
+import Sidebar from "../components/Sidebar";
 import Showinf from "../components/Showinf";
+import Searchbar from "../components/Searchbar";
 
 const Dashboard = () => {
   return (
@@ -9,6 +10,9 @@ const Dashboard = () => {
       <Sidebar />
       <div className="dashboard__view">
         <Showinf name="CUSTOMER INFORMATION" />
+        <div className="search-area">
+          <Searchbar name="Customer ID" />
+        </div>
       </div>
     </div>
   );
