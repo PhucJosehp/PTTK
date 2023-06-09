@@ -1,11 +1,14 @@
-$colorSideBar: #ffffff;
-$textcolor: #000;
-$hovercolor: #d9fdff;
+$colorSideBar: #526d82;
+$textcolor: #dde6ed;
+$hovercolor: #dde6ed;
 
 //------Side bar-----//
 .sidebar {
+  position: sticky;
   width: 40vh;
   height: 100vh;
+  overflow-y: auto;
+  top: 0;
 
   background: $colorSideBar;
 
@@ -17,7 +20,7 @@ $hovercolor: #d9fdff;
     &__logo {
       width: 10 0px;
       height: 100px;
-      border: 1px black solid;
+      border: 1px rgb(255, 255, 255) solid;
       border-radius: 50%;
     }
 
@@ -28,7 +31,7 @@ $hovercolor: #d9fdff;
       font-size: 60px;
       margin-left: 15px;
 
-      color: #7c7c7c;
+      color: $textcolor;
     }
   }
 
@@ -50,6 +53,7 @@ $hovercolor: #d9fdff;
 
       &:hover {
         border-radius: 97px;
+        color: #000000;
         background-color: $hovercolor;
         transition: all 0.3;
       }
@@ -63,6 +67,7 @@ $hovercolor: #d9fdff;
   }
 }
 .active {
+  color: #000000;
   width: 275px;
   height: 50px;
   border-radius: 97px;
@@ -87,6 +92,7 @@ $hovercolor: #d9fdff;
     }
 
     &__date {
+      color: $textcolor;
       font-weight: 275;
       font-size: 20px;
       line-height: 24px;
@@ -101,6 +107,7 @@ $hovercolor: #d9fdff;
 
   &__screen-name {
     margin-top: 4.5vh;
+    color: $textcolor;
 
     display: flex;
     align-items: center;
@@ -115,6 +122,7 @@ $hovercolor: #d9fdff;
 //-----Searchbar-----//
 .searchbar {
   &__name {
+    color: $textcolor;
     font-size: 20px;
     line-height: 24px;
     margin-bottom: 10px;

@@ -17,7 +17,15 @@ const Dashboard = () => {
           <Searchbar name="Phone number" />
         </div>
 
-        <div className="dashboard__view__showdata"></div>
+        <div className="dashboard__view__showdata">
+          <ul className="dashboard__view__showdata__title">
+            <li style={{ marginLeft: -70 }}>Customer ID</li>
+            <li style={{ marginLeft: -30 }}>Customer name</li>
+            <li style={{ marginLeft: 70 }}>ID card</li>
+            <li>Gender</li>
+            <li>Phone number</li>
+          </ul>
+        </div>
       </div>
     </div>
   );
