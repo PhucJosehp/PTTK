@@ -36,3 +36,54 @@
     }
   }
 }
+
+//-----CheckIn-----//
+.checkin {
+  display: flex;
+  &__view {
+    flex-grow: 1;
+    &__inputdata {
+      display: flex;
+      width: 1350px;
+      height: 590px;
+      background: #f9f9f9;
+      border-radius: 20px;
+      margin: 0px 3.5vw;
+      &__name {
+        font-size: 20px;
+        line-height: 24px;
+        width: 550px;
+
+        display: flex;
+        justify-content: space-between;
+
+        margin: 50px 50px;
+      }
+
+      &__input {
+        width: 350px;
+        height: 30px;
+      }
+
+      &__right {
+        margin-right: 50px;
+      }
+    }
+  }
+
+  &__confirmbtn {
+    height: 80px;
+    width: 170px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    border-radius: 25px;
+    background-color: #526d82;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #526d8286;
+    }
+  }
+}
