@@ -12,6 +12,7 @@ const Dashboard = () => {
       .get("http://localhost:5000")
       .then((res) => {
         setRecords(res.data);
+        console.log(res);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -40,11 +41,11 @@ const Dashboard = () => {
             {records.map((record, index) => (
               <ul
                 className="dashboard__view__showdata__displaydata"
-                key={index}
+                key={record.MaKH}
               >
                 <li>{record.MaKH}</li>
                 <li>{record.HoTen}</li>
-                <li>{record.CMND}</li>
+                <li>{record.CMMD}</li>
                 <li>{record.GIOITINH}</li>
                 <li>{record.SDT}</li>
               </ul>
