@@ -50,3 +50,73 @@
   }
 }
 
+.data_ID {
+  width: 100px;
+}
+
+.data_Name {
+  width: 250px;
+}
+
+.data_CMMD {
+  width: 200px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.data_GT {
+  width: 50px;
+}
+
+.data_SDT {
+  width: 150px;
+}
+
+//-----Checkin-----//
+
+.checkin {
+  display: flex;
+  &__view {
+    flex-grow: 1;
+
+    &__inputdata {
+      width: 1300px;
+      height: 565px;
+      background-color: #dde6ed;
+      margin: auto;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      &__nameLeft {
+        display: flex;
+        justify-content: space-between;
+        font-size: 20px;
+        width: 400px;
+        margin: 50px 50px;
+      }
+      &__input {
+        height: 30px;
+        width: 250px;
+      }
+
+      &__nameRight {
+        display: flex;
+        justify-content: space-between;
+        font-size: 20px;
+        width: 500px;
+        margin: 50px 50px;
+      }
+    }
+  }
+
+  &__confirmbtn {
+    width: 150px;
+    height: 50px;
+
+    cursor: pointer;
+    background: #c6fed9;
+    border-radius: 28px;
+
+    font-size: 20px;
+  }
+}
