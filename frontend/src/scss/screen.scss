@@ -19,7 +19,10 @@
       margin-left: 3.5vw;
       background: #f9f9f9;
       border-radius: 20px;
+
       &__title {
+        border-bottom: 1px solid #bebebe;
+
         padding: 10px 0px;
         display: flex;
         justify-content: space-around;
@@ -47,8 +50,3 @@
   }
 }
 
-.data_ID {
-  width: 250px;
-  display: flex;
-  justify-content: center;
-}
