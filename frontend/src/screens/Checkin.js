@@ -56,9 +56,9 @@ const Checkin = () => {
         <Showinf name="CHECK IN" />
 
         <div className="checkin__view__inputdata">
-          <div className="checkin__view__inputdata__left">
+          <div>
             {itemLeft.map((item, index) => (
-              <div className="checkin__view__inputdata__name">
+              <div className="checkin__view__inputdata__nameLeft">
                 {item.name}
                 <input className="checkin__view__inputdata__input" />
               </div>
@@ -67,10 +67,7 @@ const Checkin = () => {
 
           <div className="checkin__view__inputdata__right">
             {itemRight.map((item, index) => (
-              <div
-                style={{ width: 600 }}
-                className="checkin__view__inputdata__name"
-              >
+              <div className="checkin__view__inputdata__nameRight">
                 {item.name}
                 <input className="checkin__view__inputdata__input" />
               </div>

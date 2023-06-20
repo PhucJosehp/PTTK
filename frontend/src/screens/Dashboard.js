@@ -31,11 +31,11 @@ const Dashboard = () => {
 
         <div className="dashboard__view__showdata">
           <ul className="dashboard__view__showdata__title">
-            <li style={{ marginLeft: -20 }}>Customer ID</li>
-            <li style={{ marginLeft: -60 }}> Customer name</li>
-            <li style={{ marginLeft: -40 }}>ID card</li>
-            <li style={{ marginRight: -35 }}>Gender</li>
-            <li style={{ marginRight: -30 }}>Phone number</li>
+            <li style={{ marginLeft: -40 }}>Customer ID</li>
+            <li style={{ marginLeft: -70 }}> Customer name</li>
+            <li style={{ marginLeft: 50, marginRight: 80 }}>ID card</li>
+            <li style={{ marginLeft: -20, marginRight: -60 }}>Gender</li>
+            <li style={{ marginRight: -15 }}>Phone number</li>
           </ul>
           <div>
             {records.map((record, index) => (
@@ -44,10 +44,10 @@ const Dashboard = () => {
                 key={record.MaKH}
               >
                 <li className="data_ID">{record.MaKH}</li>
-                <li className="data_ID">{record.HoTen}</li>
-                <li className="data_ID">{record.CMMD}</li>
-                <li className="data_ID">{record.GIOITINH}</li>
-                <li className="data_ID">{record.SDT}</li>
+                <li className="data_Name">{record.HoTen}</li>
+                <li className="data_CMMD">{record.CMMD}</li>
+                <li className="data_GT">{record.GIOITINH}</li>
+                <li className="data_SDT">{record.SDT}</li>
               </ul>
             ))}
           </div>
