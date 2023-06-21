@@ -63,8 +63,13 @@ $hovercolor: #dde6ed;
   &__icon {
     width: 32px;
     height: 32px;
-    margin-right: 10px;
   }
+}
+
+.coverIcon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 12px;
 }
 .active {
   color: #000000;
