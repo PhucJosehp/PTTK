@@ -8,6 +8,9 @@ import Services from "./screens/Services";
 import Tours from "./screens/Tours";
 import Payment from "./screens/Payment";
 
+import PaymentDetail from "./screens/PaymentDetail";
+import TourDetail from "./screens/TourDetail";
+
 function App() {
   return (
     <>
@@ -18,6 +21,9 @@ function App() {
         <Route path="/Services" element={<Services />} />
         <Route path="/Tours" element={<Tours />} />
         <Route path="/Payment" element={<Payment />} />
+
+        <Route path="/Payment/Detail" element={<PaymentDetail />} />
+        <Route path="Tours/Detail" element={<TourDetail />} />
       </Routes>
     </>
   );

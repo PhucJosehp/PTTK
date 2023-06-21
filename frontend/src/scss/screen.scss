@@ -165,7 +165,168 @@
 }
 
 .icon {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
+}
+
+.icon__back {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+//-----TOURS-----//
+.tours {
+  display: flex;
+  &__view {
+    &__search-area {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 950px;
+      margin-left: 3.5vw;
+      margin-top: 20px;
+      margin-bottom: 25px;
+      &__icon {
+        margin-right: -100px;
+        margin-left: 100px;
+      }
+    }
+
+    &__showdata {
+      width: 1400px;
+      height: 550px;
+
+      margin-left: 3.5vw;
+      background: #f9f9f9;
+      border-radius: 20px;
+
+      &__title {
+        border-bottom: 1px solid #bebebe;
+
+        padding: 10px 0px;
+        display: flex;
+        justify-content: space-around;
+
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 24px;
+
+        list-style: none;
+      }
+    }
+  }
+}
+
+//-----PAYMENT-----//
+.Payment {
+  display: flex;
+  &__view {
+    &__search-area {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 950px;
+      margin-left: 3.5vw;
+      margin-top: 20px;
+      margin-bottom: 25px;
+      &__icon {
+        margin-right: -100px;
+        margin-left: 100px;
+      }
+    }
+
+    &__showdata {
+      width: 1400px;
+      height: 550px;
+
+      margin-left: 3.5vw;
+      background: #f9f9f9;
+      border-radius: 20px;
+
+      &__title {
+        border-bottom: 1px solid #bebebe;
+
+        padding: 10px 0px;
+        display: flex;
+        justify-content: space-around;
+
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 24px;
+
+        list-style: none;
+      }
+    }
+  }
+}
+
+//-----PAYMENT DETAIL-----//
+.PaymentDetail {
+  display: flex;
+  &__view {
+    &__data {
+      font-size: 20px;
+      margin: -20px auto 5px auto;
+      width: 750px;
+      height: 650px;
+      background-color: #dde6ed;
+
+      border-radius: 15px;
+      &__infcus {
+        border-bottom: 2px solid #303030;
+        &__1st {
+          display: flex;
+          justify-content: space-between;
+          &__ID {
+            display: flex;
+            margin: 50px 20px 0px 40px;
+          }
+          &__date {
+            margin: 50px 50px 0px 0px;
+          }
+        }
+
+        &__2nd {
+          display: flex;
+          margin-bottom: 20px;
+          &__ID {
+            display: flex;
+            margin: 20px 20px 0px 40px;
+          }
+          &__name {
+            display: flex;
+            margin: 20px 10px 0px 30px;
+          }
+        }
+      }
+
+      &__money {
+        border-bottom: 2px solid #303030;
+        &__title {
+          margin: 20px 10px 0px 30px;
+        }
+        &__name {
+          margin: 40px 50px;
+        }
+        &__cover {
+          height: 100px;
+          width: 650px;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      &__total {
+        display: flex;
+        justify-content: space-between;
+
+        margin: 30px 10px 0px 30px;
+
+        height: 100px;
+        width: 600px;
+      }
+    }
+  }
 }
