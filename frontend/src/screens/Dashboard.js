@@ -7,6 +7,9 @@ import Searchbar from "../components/Searchbar";
 
 const Dashboard = () => {
   const [records, setRecords] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
+
   useEffect(() => {
     axios
       .get("http://localhost:5000")
@@ -16,6 +19,18 @@ const Dashboard = () => {
       })
       .catch((err) => console.log(err));
   }, []);
+
+  // Calculate total pages based on data length and items per page
+  const totalPages = Math.ceil(records.length / itemsPerPage);
+
+  // Get the current page's data based on pagination
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = records.slice(indexOfFirstItem, indexOfLastItem);
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
 
   return (
     <div className="dashboard">
@@ -38,7 +53,7 @@ const Dashboard = () => {
             <li style={{ marginRight: -15 }}>Phone number</li>
           </ul>
           <div>
-            {records.map((record, index) => (
+            {currentItems.map((record, index) => (
               <ul
                 className="dashboard__view__showdata__displaydata"
                 key={record.MaKH}
@@ -50,6 +65,20 @@ const Dashboard = () => {
                 <li className="data_SDT">{record.SDT}</li>
               </ul>
             ))}
+          </div>
+          <div className="dashboard__view__showdata__displaydata__pagenum">
+            {Array.from({ length: totalPages }, (_, index) => index + 1).map(
+              (pageNumber) => (
+                <button
+                  className="dashboard__view__showdata__displaydata__page"
+                  key={pageNumber}
+                  onClick={() => handlePageChange(pageNumber)}
+                  activeclassname="active-num"
+                >
+                  {pageNumber}
+                </button>
+              )
+            )}
           </div>
         </div>
       </div>

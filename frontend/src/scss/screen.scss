@@ -35,16 +35,27 @@
         border-bottom: 1px solid rgb(87, 87, 87);
       }
       &__displaydata {
-        padding: 10px 0px;
         display: flex;
         justify-content: space-around;
+        align-items: center;
 
+        padding: 10px 0px;
         font-weight: 300;
-        font-size: 20px;
-        line-height: 24px;
+        font-size: 18px;
 
         list-style: none;
         border-bottom: 1px solid rgb(87, 87, 87);
+
+        &__pagenum {
+          position: static;
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+        }
+
+        &__page {
+          margin: 0px 5px;
+        }
       }
     }
   }
@@ -52,24 +63,29 @@
 
 .data_ID {
   width: 100px;
+  margin-top: -15px;
 }
 
 .data_Name {
   width: 250px;
+  margin-top: -15px;
 }
 
 .data_CMMD {
   width: 200px;
+  margin-top: -15px;
   display: flex;
   justify-content: flex-start;
 }
 
 .data_GT {
   width: 50px;
+  margin-top: -15px;
 }
 
 .data_SDT {
   width: 150px;
+  margin-top: -15px;
 }
 
 //-----Checkin-----//
