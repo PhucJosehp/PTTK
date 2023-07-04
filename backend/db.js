@@ -13,7 +13,7 @@ const db = mysql.createConnection({
 });
 
 app.get("/", (req, res) => {
-  const sql = "SELECT * FROM KHACHHANG LIMIT 98";
+  const sql = "SELECT * FROM KHACHHANG";
   db.query(sql, (err, data) => {
     if (err) return res.json("Error");
     return res.json(data);
