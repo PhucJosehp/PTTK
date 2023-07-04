@@ -52,6 +52,7 @@ const Dashboard = () => {
             <li style={{ marginLeft: -20, marginRight: -60 }}>Gender</li>
             <li style={{ marginRight: -15 }}>Phone number</li>
           </ul>
+
           <div>
             {currentItems.map((record, index) => (
               <ul
@@ -66,19 +67,38 @@ const Dashboard = () => {
               </ul>
             ))}
           </div>
-          <div className="dashboard__view__showdata__displaydata__pagenum">
-            {Array.from({ length: totalPages }, (_, index) => index + 1).map(
-              (pageNumber) => (
-                <button
-                  className="dashboard__view__showdata__displaydata__page"
-                  key={pageNumber}
-                  onClick={() => handlePageChange(pageNumber)}
-                  activeclassname="active-num"
-                >
-                  {pageNumber}
-                </button>
-              )
-            )}
+
+          <div className="dashboard__view__showdata__displaydata__footer">
+            <div className="dashboard__view__showdata__displaydata__curpage">
+              <p>Current Page: {currentPage}</p>
+              <button
+                disabled={currentPage === 1}
+                onClick={() => handlePageChange(currentPage - 1)}
+                className="dashboard__view__showdata__displaydata__nextback"
+              >
+                Previous
+              </button>
+              <button
+                disabled={currentPage === totalPages}
+                onClick={() => handlePageChange(currentPage + 1)}
+                className="dashboard__view__showdata__displaydata__nextback"
+              >
+                Next
+              </button>
+            </div>
+            <div className="dashboard__view__showdata__displaydata__pagenum">
+              {Array.from({ length: totalPages }, (_, index) => index + 1).map(
+                (pageNumber) => (
+                  <button
+                    className="dashboard__view__showdata__displaydata__page"
+                    key={pageNumber}
+                    onClick={() => handlePageChange(pageNumber)}
+                  >
+                    {pageNumber}
+                  </button>
+                )
+              )}
+            </div>
           </div>
         </div>
       </div>
