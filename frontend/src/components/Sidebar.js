@@ -55,7 +55,7 @@ const Sidebar = ({ children }) => {
     <div className="sidebar">
       <div className="sidebar__logo">
         <img src={logo} alt="logo" className="sidebar__logo__logo" />
-        <h2 className="sidebar__logo__name">P.T.D.H</h2>
+        <h2 className="sidebar__logo__name">Hotelier360</h2>
       </div>
 
       <div className="sidebar__tab">
