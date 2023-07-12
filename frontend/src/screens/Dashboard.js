@@ -20,6 +20,9 @@ const Dashboard = () => {
       .catch((err) => console.log(err));
   }, []);
 
+  const getDataSearch = (data) => {
+    setRecords(data);
+  };
   // Calculate total pages based on data length and items per page
   const totalPages = Math.ceil(records.length / itemsPerPage);
 
@@ -38,10 +41,23 @@ const Dashboard = () => {
       <div className="dashboard__view">
         <Showinf name="CUSTOMER INFORMATION" />
         <div className="dashboard__view__search-area">
-          <Searchbar name="Customer ID" />
-          <Searchbar name="Customer name" />
-          <Searchbar name="ID Card" />
-          <Searchbar name="Phone number" />
+          <Searchbar
+            name="Customer ID"
+            search="MaKH"
+            onChange={getDataSearch}
+          />
+          <Searchbar
+            name="Customer name"
+            search="HoTen"
+            onChange={getDataSearch}
+          />
+          <Searchbar name="ID Card" search="CMMD" onChange={getDataSearch} />
+
+          <Searchbar
+            name="Phone number"
+            search="SDT"
+            onChange={getDataSearch}
+          />
         </div>
 
         <div className="dashboard__view__showdata">
