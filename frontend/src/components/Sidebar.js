@@ -59,7 +59,7 @@ const Sidebar = ({ children }) => {
       </div>
 
       <div className="sidebar__tab">
-        {itemtab.map((item, idex) => (
+        {itemtab.map((item) => (
           <NavLink
             key={item.id}
             to={item.path}
