@@ -1,9 +1,9 @@
-const express = require("express");
-const mysql = require("mysql");
 const cors = require("cors");
+const express = require("express");
 
-const app = express();
-app.use(cors());
+const roomRoutes = require("./routes/room.route");
+
+const mysql = require("mysql");
 
 const db = mysql.createConnection({
   host: "localhost",
@@ -12,11 +12,16 @@ const db = mysql.createConnection({
   database: "qlkhachsan",
 });
 
+const app = express();
+app.use(cors());
+
+app.use("/room", roomRoutes);
+
 app.get("/", (req, res) => {
   const sql = "SELECT * FROM KHACHHANG";
   db.query(sql, (err, data) => {
     if (err) return res.json("Error");
-    return res.json(data);
+    return res.status(200).json(data);
   });
 });
 

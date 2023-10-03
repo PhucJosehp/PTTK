@@ -1,11 +1,27 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import "../scss/screen.scss";
 import Sidebar from "../components/Sidebar";
 import Showinf from "../components/Showinf";
 import Searchbar from "../components/Searchbar";
 import ROOM from "../assets/icon/Rooms.png";
 
+import axios from "axios";
+
 const Rooms = () => {
+  const [records, setRecords] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/room")
+      .then((res) => {
+        setRecords(res.data);
+        console.log(res);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
   const rooms = [
     {
       id: 1,
@@ -81,15 +97,12 @@ const Rooms = () => {
     },
   ];
 
-  const [records, setRecords] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
   const getDataSearch = (data) => {
     setRecords(data);
   };
 
   const check = (con) => {
-    if (con == "Vacancy") return true;
+    if (con === "Còn") return true;
     else return false;
   };
 
@@ -112,24 +125,24 @@ const Rooms = () => {
         </div>
 
         <div className="room__view__showroom">
-          {rooms.map((room) => (
-            <div key={room.id} className="room__view__showroom__item">
+          {records.map((room) => (
+            <div key={room.MaPhong} className="room__view__showroom__item">
               <div className="room__view__showroom__item__icon">
                 <img className="room-img" src={ROOM} alt="room" />
-                <div>{room.rm}</div>
+                <div>{room.MaPhong}</div>
               </div>
               <div className="room__view__showroom__item__cusname">
-                {room.cusName}
+                {room.HoTen}
               </div>
               <div className="room__view__showroom__item__cover">
                 <div
                   className={
-                    check(room.state)
+                    check(room.TinhTrangPhong)
                       ? "room__view__showroom__item__state--empty"
                       : "room__view__showroom__item__state--use"
                   }
                 >
-                  {room.state}
+                  {room.TinhTrangPhong}
                 </div>
               </div>
             </div>
