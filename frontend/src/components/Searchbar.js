@@ -1,5 +1,33 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { styled } from "@mui/material/styles";
+
+import TextField from "@mui/material/TextField";
+
+const CssTextField = styled(TextField)({
+  "& label.Mui-focused": {
+    color: "#A0AAB4",
+  },
+  "& .MuiInput-underline:after": {
+    borderBottomColor: "#B2BAC2",
+  },
+  "& .MuiFilledInput-root": {
+    "& fieldset": {
+      borderColor: "#E0E3E7",
+      borderRadius: "10px",
+    },
+    "&:hover fieldset": {
+      borderColor: "#B2BAC2",
+    },
+    "&.Mui-focused fieldset": {
+      borderColor: "#6F7E8C",
+    },
+    "& input": {
+      backgroundColor: "#ffffff", // Change the input background color
+      borderRadius: "10px",
+    },
+  },
+});
 
 function Searchbar(props) {
   useEffect(() => {
@@ -22,9 +50,10 @@ function Searchbar(props) {
   return (
     <div className="searchbar">
       <div className="searchbar__name">{props.name}</div>
-      <input
-        placeholder="Search..."
+      <CssTextField
+        label="Search"
         className="searchbar__search"
+        variant="filled"
         onChange={(change) => handleSearch(change.target.value)}
       />
     </div>
