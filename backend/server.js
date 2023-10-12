@@ -2,6 +2,8 @@ const cors = require("cors");
 const express = require("express");
 
 const roomRoutes = require("./routes/room.route");
+const paymentRoutes = require("./routes/Payment.route");
+const tourRoutes = require("./routes/tour.route");
 
 const mysql = require("mysql");
 
@@ -16,6 +18,8 @@ const app = express();
 app.use(cors());
 
 app.use("/room", roomRoutes);
+app.use("/payment", paymentRoutes);
+app.use("/tour", tourRoutes);
 
 app.get("/", (req, res) => {
   const sql = "SELECT * FROM KHACHHANG";
